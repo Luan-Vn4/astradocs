@@ -1,7 +1,13 @@
 {
 	"extends": "../../tsconfig.json",
 	"compilerOptions": {
-		"moduleDetection": "force"
+		"composite": true,
+		"declaration": true,
+		"declarationMap": true,
+		"noEmit": false,
+		"moduleDetection": "force",
+		"rootDir": "src",
+		"outDir": "dist"
 	},
 	"include": ["src/**/*"]
 }
