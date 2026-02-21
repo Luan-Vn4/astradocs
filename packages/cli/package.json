@@ -1,6 +1,6 @@
 {
 	"name": "@astradocs/cli",
-	"description": "An AI powered tool which aims to provide automatic documentation augmentad by context information",
+	"description": "Astradocs is an AI powered tool which aims to provide automatic documentation augmentad by context information",
 	"version": "0.0.0",
 	"author": "Luan-Vn4",
 	"bin": {
