@@ -1,5 +1,5 @@
 {
-	"name": "core",
+	"name": "@astradocs/core",
 	"module": "index.ts",
 	"type": "module",
 	"types": "src/index.ts",
