@@ -1,9 +1,10 @@
 {
 	"name": "astradocs-monorepo",
+	"devDependencies": {
+		"@biomejs/biome": "latest",
+		"@types/node": "^25.3.0"
+	},
 	"private": true,
-	"workspaces": [
-		"packages/*"
-	],
 	"scripts": {
 		"cli": "bun run --cwd packages/cli",
 		"typecheck": "tsc --noEmit",
@@ -11,7 +12,7 @@
 		"lint:fix": "biome check --write .",
 		"format": "biome format --write ."
 	},
-	"devDependencies": {
-		"@biomejs/biome": "latest"
-	}
+	"workspaces": [
+		"packages/*"
+	]
 }
