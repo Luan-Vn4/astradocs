@@ -1,16 +1,10 @@
 {
 	"extends": "../../tsconfig.json",
 	"compilerOptions": {
-		"declaration": true,
-		"module": "Node16",
+		// Build
 		"outDir": "dist",
-		"rootDir": "src",
-		"target": "es2022",
-		"moduleResolution": "node16"
+		"rootDir": "src"
 	},
 	"references": [{ "path": "../core" }],
-	"include": ["./src/**/*"],
-	"ts-node": {
-		"esm": true
-	}
+	"include": ["./src/**/*"]
 }

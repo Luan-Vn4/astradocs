@@ -1,18 +1,34 @@
 {
 	"compilerOptions": {
-		"target": "ESNext",
-		"module": "ESNext",
-		"moduleResolution": "bundler",
-		"lib": ["ESNext"],
-		"allowImportingTsExtensions": true,
-		"noEmit": true,
-
+		// Paths
 		"baseUrl": ".",
 		"paths": {
 			"@astradocs/core": ["./packages/core/src/index.ts"],
-			"@astradocs/core/*": ["./packages/core/src/*.ts"]
+			"@astradocs/core/*": ["./packages/core/src/*.ts"],
+			"@astradocs/cli/*": ["./packages/cli/src/lib/*"]
 		},
 
+		// Modules
+		"target": "ES2022",
+		"lib": ["ES2022"],
+		"module": "NodeNext",
+		"moduleResolution": "NodeNext",
+		"moduleDetection": "force",
+
+		// Interoperability
+		"esModuleInterop": true,
+		"skipLibCheck": true,
+		"isolatedModules": true,
+		"resolveJsonModule": true,
+
+		// Build
+		"composite": true,
+		"declaration": true,
+		"declarationMap": true,
+		"sourceMap": true,
+		"noEmit": false,
+
+		// Strictness
 		"strict": true,
 		"noImplicitAny": true,
 		"strictNullChecks": true,
@@ -29,10 +45,6 @@
 		"noFallthroughCasesInSwitch": true,
 		"noUncheckedIndexedAccess": true,
 
-		"esModuleInterop": true,
-		"forceConsistentCasingInFileNames": true,
-		"skipLibCheck": true,
-		"resolveJsonModule": true,
-		"isolatedModules": true
+		"forceConsistentCasingInFileNames": true
 	}
 }

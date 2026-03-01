@@ -1,6 +1,12 @@
 {
 	"name": "@astradocs/core",
-	"module": "index.ts",
+	"exports": {
+		"./utils/async": "./dist/utils/async/index.js",
+		"./utils/io": "./dist/utils/io/index.js"
+	},
+	"scripts": {
+		"build": "tsc -b"
+	},
 	"devDependencies": {
 		"@types/bun": "latest"
 	},
@@ -9,7 +15,6 @@
 	},
 	"private": true,
 	"type": "module",
-	"types": "src/index.ts",
 	"dependencies": {
 		"@langchain/core": "^1.1.27",
 		"@langchain/openai": "^1.2.9",

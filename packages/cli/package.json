@@ -54,8 +54,8 @@
 		],
 		"topicSeparator": " ",
 		"topics": {
-			"hello": {
-				"description": "Say hello to the world and others"
+			"langs": {
+				"description": "Manage languages"
 			}
 		}
 	},
@@ -63,7 +63,7 @@
 	"scripts": {
 		"start": "bun bin/run.js",
 		"dev": "bun bin/dev.js",
-		"build": "bun run clean && tsc -b",
+		"build": "bun run clean && tsc -b && oclif manifest",
 		"clean": "shx rm -rf dist tsconfig.tsbuildinfo",
 		"postpack": "shx rm -f oclif.manifest.json",
 		"posttest": "bun run lint && bun run typecheck",
@@ -71,5 +71,9 @@
 		"test": "bun test",
 		"version": "oclif readme && git add README.md"
 	},
-	"types": "dist/index.d.ts"
+	"types": "dist/index.d.ts",
+	"exports": {
+		".": "./dist/index.js",
+		"./*": "./dist/*.js"
+	}
 }
